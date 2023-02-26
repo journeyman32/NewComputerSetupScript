@@ -13,9 +13,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo apt install nodejs
 	node -v
 # Install ZSH
-# 	Arch 	pacman -S zsh 
-# 	Deb 	sudo apt install zsh 
-
+# Arch 	pacman -S zsh 
+# Deb 	sudo apt install zsh 
 # Install Oh My Zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Install VM Plugins if runnin as VM
@@ -48,6 +47,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # Arch  unzip -d op op.zip && \
 # Arch  sudo mv op/op /usr/local/bin && \
 # Arch  rm -r op.zip op
+# Setup user permissions for arch install
+# Arch	sudo groupadd onepassword-cli
+# Arch	sudo chown root:onepassword-cli /usr/local/bin/op && \
+# Arch 	sudo chmod g+s /usr/local/bin/op
 
 # Applications
 # 	Jetbrains
