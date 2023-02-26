@@ -60,7 +60,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 	git checkout stable
 	sudo make install
-	make CMAKE_BUILD_TYPE=Release
+	sudo make CMAKE_BUILD_TYPE=Release
 # Languages
 # 	Asp.net
 # 	Add :$HOME/dotnet to the end of the existing PATH statement. 
