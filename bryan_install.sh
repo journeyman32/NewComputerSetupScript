@@ -54,7 +54,12 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # 	Jetbrains
 # 	GitKraken
 # 	OneDrive
-
+#	NeoVim
+	git clone https://github.com/neovim/neovim
+	cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+	git checkout stable
+	sudo make install
+	make CMAKE_BUILD_TYPE=Release
 # Languages
 # 	Asp.net
 # 	Add :$HOME/dotnet to the end of the existing PATH statement. 
