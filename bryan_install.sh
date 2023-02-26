@@ -6,7 +6,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 #	goto mac install file
 # Update and Upgrade
-	sudo apt update && sudo apt upgrade
+	sudo apt update && sudo apt upgrade -y
 # Install Node and NPS
 	cd ~
 	curl -sL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
@@ -14,7 +14,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo apt install nodejs
 	node -v
 # Install ZSH
- 	sudo apt install zsh 
+ 	sudo apt install zsh -y
 # Arch 	pacman -S zsh 
 # Install Oh My Zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -28,6 +28,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
  	curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
  	sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
  	curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+	sudo apt update && sudo apt install 1password -y
 # Arch	1Password
 # Arch	curl -sS https://downloads.1password.com/linux/keys/1password.asc | gpg --import
 # Arch	git clone https://aur.archlinux.org/1password.git
