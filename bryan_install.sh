@@ -5,7 +5,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 #	goto mac install file
-
+# Update and Upgrade
+	sudo apt update && sudo apt upgrade
 # Install Node and NPS
 	cd ~
 	curl -sL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
@@ -13,11 +14,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	sudo apt install nodejs
 	node -v
 # Install ZSH
+ 	sudo apt install zsh 
 # Arch 	pacman -S zsh 
-# Deb 	sudo apt install zsh 
 # Install Oh My Zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# Install VM Plugins if runnin as VM
+# Install VM Plugins if running on VM
 
 # Utilities
 # Deb	1Password
