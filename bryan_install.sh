@@ -36,6 +36,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # Arch	makepkg -si
 #	1Password CLI	
  	sudo apt update && sudo apt install 1password-cli -y
+	op --version
 # Arch	ARCH="amd64" && \
 # Arch	wget "https://cache.agilebits.com/dist/1P/op2/pkg/v2.14.0/op_linux_${ARCH}_v2.14.0.zip" -O op.zip && \
 # Arch  unzip -d op op.zip && \
@@ -50,7 +51,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # 	Jetbrains
 # 	GitKraken
 # 	OneDrive
-# 	Trello
 
 # Languages
 # 	Asp.net
