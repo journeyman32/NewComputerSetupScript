@@ -2,6 +2,7 @@
 
 # Check for OS
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+#check if deb based or arch
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 #	goto mac install file
