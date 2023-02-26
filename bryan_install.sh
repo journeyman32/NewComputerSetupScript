@@ -11,7 +11,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	cd ~
 	curl -sL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
 	sudo bash nodesource_setup.sh
-	sudo apt install nodejs
+	sudo apt install nodejs -y
 	node -v
 # Install ZSH
  	sudo apt install zsh -y
@@ -19,6 +19,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # Install Oh My Zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Install VM Plugins if running on VM
+# Build Dependencies
+	sudo apt-get install ninja-build gettext libtool-bin cmake g++ pkg-config unzip curl -y
+# Arch sudo pacman -S base-devel cmake unzip ninja curl
 
 # Utilities
 # Deb	1Password
