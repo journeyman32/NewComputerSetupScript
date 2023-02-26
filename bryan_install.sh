@@ -34,16 +34,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 # Arch	git clone https://aur.archlinux.org/1password.git
 # Arch	cd 1password
 # Arch	makepkg -si
-#	1Password CLI
-	curl -sS https://downloads.1password.com/linux/keys/1password.asc | \  sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
-	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/$(dpkg --print-architecture) stable main" |  sudo tee /etc/apt/sources.list.d/1password.list
-	sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/ 
-	curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | \
- 	sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
-	sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
-	curl -sS https://downloads.1password.com/linux/keys/1password.asc | \
- 	sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
- 	sudo apt update && sudo apt install 1password-cli
+#	1Password CLI	
+ 	sudo apt update && sudo apt install 1password-cli -y
 # Arch	ARCH="amd64" && \
 # Arch	wget "https://cache.agilebits.com/dist/1P/op2/pkg/v2.14.0/op_linux_${ARCH}_v2.14.0.zip" -O op.zip && \
 # Arch  unzip -d op op.zip && \
