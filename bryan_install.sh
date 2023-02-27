@@ -1,10 +1,10 @@
 # Configuration
 
 # Check for OS
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+#if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 #check if deb based or arch
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+#elif [[ "$OSTYPE" == "darwin"* ]]; then
 #	goto mac install file
 # Update and Upgrade
 	sudo apt update && sudo apt upgrade -y
