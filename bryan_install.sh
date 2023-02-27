@@ -22,6 +22,7 @@
 # Install VM Plugins if running on VM
 # Build Dependencies
 	sudo apt-get install ninja-build gettext libtool-bin cmake g++ pkg-config unzip curl -y
+	cd ~ && mkdir .config && cd .config && mkdir nvim && cd nvim && mkdir lua && mkdir plugin && cd lua && mkdir journeyman32 && cd journeyman32 && mkdir core && mkdir plugins && cd plugins && mkdir lsp && cd .. && cd .. && cd .. 
 # Arch sudo pacman -S base-devel cmake unzip ninja curl
 
 # Utilities
