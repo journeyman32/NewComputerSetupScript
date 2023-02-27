@@ -1,5 +1,5 @@
 # Configuration
-
+#!/usr/bin/env bash
 # Check for OS
 #if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 #check if deb based or arch
