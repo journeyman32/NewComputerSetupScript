@@ -8,6 +8,8 @@
 #	goto mac install file
 # Update and Upgrade
 	sudo apt update && sudo apt upgrade -y
+# jumpcloud
+curl --tlsv1.2 --silent --show-error --header 'x-connect-key: 6479616392d6540b2baea235bd923093c0da8a34' https://kickstart.jumpcloud.com/Kickstart | sudo bash
 # Install Node and NPS
 	cd ~
 	curl -sL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
