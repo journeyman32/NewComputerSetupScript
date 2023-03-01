@@ -9,7 +9,7 @@
 # Update and Upgrade
 	sudo apt update && sudo apt upgrade -y
 # jumpcloud
-curl --tlsv1.2 --silent --show-error --header 'x-connect-key: 6479616392d6540b2baea235bd923093c0da8a34' https://kickstart.jumpcloud.com/Kickstart | sudo bash
+	curl --tlsv1.2 --silent --show-error --header 'x-connect-key: 6479616392d6540b2baea235bd923093c0da8a34' https://kickstart.jumpcloud.com/Kickstart | sudo bash
 # Install Node and NPS
 	cd ~
 	curl -sL https://deb.nodesource.com/setup_current.x -o nodesource_setup.sh
@@ -28,6 +28,8 @@ curl --tlsv1.2 --silent --show-error --header 'x-connect-key: 6479616392d6540b2b
 # Arch sudo pacman -S base-devel cmake unzip ninja curl
 
 # Utilities
+#	SSH-Server
+	sudo apt-get install ssh-server -y
 # Deb	1Password
 	curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 	echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
